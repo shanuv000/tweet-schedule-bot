@@ -1,0 +1,23 @@
+const prompts = [
+  "Craft a powerful quote under 220 characters about perseverance, paired with three trending hashtags.",
+  "Write a hopeful message within 220 characters focused on growth, followed by three niche-specific hashtags.",
+  "Generate an empowering quote under 220 characters for entrepreneurs, with three high-engagement hashtags.",
+  "Create a resilience-focused saying under 220 characters and include three positivity-themed hashtags.",
+  "Share a concise motivational quote (under 220 characters) about overcoming fear, with three viral hashtags.",
+  "Design a success-oriented quote under 220 characters for students, paired with three study-related hashtags.",
+  "Formulate an energizing message within 220 characters about self-belief, followed by three inspirational hashtags.",
+  "Compose a thought-provoking quote under 220 characters on daily progress, with three productivity hashtags.",
+  "Suggest a meaningful quote under 220 characters about gratitude, including three wellness-focused hashtags.",
+  "Develop a positivity-driven saying under 220 characters for mental health, with three supportive hashtags.",
+  "Provide a confidence-boosting quote under 220 characters, followed by three #Mindset hashtags.",
+  "Generate a leadership-themed quote under 220 characters, paired with three #Success hashtags.",
+  "Craft a minimalist motivational message under 220 characters with three #HustleCulture hashtags.",
+  "Write a quote under 220 characters about embracing change, followed by three #GrowthMindset hashtags.",
+  "Create a quote under 220 characters celebrating small wins, with three #DailyMotivation hashtags.",
+  "Share a teamwork-focused quote under 220 characters and three #Collaboration hashtags.",
+  "Design an ambition-driven quote under 220 characters, paired with three #GoalSetting hashtags.",
+  "Generate a quote under 220 characters about overcoming adversity, with three #Resilience hashtags.",
+  "Compose a mindfulness-themed message under 220 characters and three #SelfCare hashtags.",
+  "Formulate a quote under 220 characters about innovation, followed by three #FutureReady hashtags.",
+];
+module.exports = prompts;

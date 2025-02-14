@@ -14,12 +14,12 @@ async function postScheduledTweet() {
   }
 }
 
-// Schedule tweets at 9:00 AM and 5:00 PM daily
-schedule.scheduleJob("0 9,17 * * *", postScheduledTweet);
+// Schedule the job to run at 9 AM, 1 PM, 5 PM, and 7 PM every day
+// schedule.scheduleJob("0 0 9,13,17,19 * * *", postScheduledTweet);
 // every 30 second
-// schedule.scheduleJob("*/30 * * * * *", postScheduledTweet);
+schedule.scheduleJob("*/30 * * * * *", postScheduledTweet);
 console.log(
-  "Tweet scheduler running. Tweets will be posted at 9 AM and 5 PM daily."
+  "Tweet scheduler running. Tweets will be posted at 9 AM, 1 PM, 5 PM and 7 PM daily."
 );
 
 // Handle process termination
