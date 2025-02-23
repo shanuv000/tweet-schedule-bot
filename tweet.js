@@ -2,6 +2,7 @@ const schedule = require("node-schedule");
 const { generateMotivationalTweet } = require("./components/gemini-helper");
 const { postTweet } = require("./components/twitter-helper");
 
+
 async function postScheduledTweet() {
   try {
     console.log("Generating motivational tweet...");
@@ -14,13 +15,14 @@ async function postScheduledTweet() {
   }
 }
 
-// Schedule the job to run at 9 AM, 1 PM, 5 PM, and 7 PM every day
-// schedule.scheduleJob("0 0 9,13,17,19 * * *", postScheduledTweet);
-// every 30 second
-schedule.scheduleJob("*/30 * * * * *", postScheduledTweet);
-console.log(
-  "Tweet scheduler running. Tweets will be posted at 9 AM, 1 PM, 5 PM and 7 PM daily."
-);
+// Schedule a job to run every 30 seconds
+// schedule.scheduleJob("*/30 * * * * *", postScheduledTweet);
+
+// Schedule the job to run every 3 hours
+schedule.scheduleJob("0 */3 * * *", postScheduledTweet);
+
+console.log("Tweet scheduler running. Tweets will be posted every 3 hours.");
+console.log('Job executed at:', new Date().toLocaleTimeString());
 
 // Handle process termination
 process.on("SIGINT", () => {

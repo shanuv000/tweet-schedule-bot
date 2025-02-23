@@ -8,11 +8,12 @@ const model = genAI.getGenerativeModel({
 });
 
 const generationConfig = {
-  temperature: 0.9,
-  topP: 0.95,
-  topK: 40,
-  maxOutputTokens: 350, // Optimized for short tweets
+  temperature: 0.7,        // Balanced creativity for engaging tweets
+  topP: 0.85,              // Focused but not overly restrictive
+  topK: 20,                // Narrow token selection for precision
+  maxOutputTokens: 120,    // Strict limit for tweet brevity
   responseMimeType: "text/plain",
+  
 };
 
 async function generateMotivationalTweet() {
