@@ -24,8 +24,15 @@ twitterAccounts.forEach((account) => {
 // twitterAccounts.forEach(account => {
 //   schedule.scheduleJob("*/30 * * * * *", () => postScheduledTweet(account));
 // });
+const nextTweetTime = new Date();
+nextTweetTime.setMinutes(0, 0, 0); // Set minutes and seconds to 0
+const currentHour = nextTweetTime.getHours();
+const hoursUntilNext = 3 - (currentHour % 3);
+nextTweetTime.setHours(
+  currentHour + (hoursUntilNext === 0 ? 3 : hoursUntilNext)
+);
 console.log(
-  "Tweet scheduler running. Tweets will be posted every 3 hours for each account."
+  `Tweet scheduler running. Next tweets will be posted at ${nextTweetTime.toLocaleTimeString()} and every 3 hours thereafter for each account.`
 );
 
 process.on("SIGINT", () => {
