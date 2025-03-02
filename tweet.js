@@ -1,30 +1,33 @@
 const schedule = require("node-schedule");
-const { generateMotivationalTweet } = require("./components/gemini-helper");
-const { postTweet } = require("./components/twitter-helper");
+const geminiHelper = require("./components/gemini-helper");
+const twitterHelper = require("./components/twitter-helper");
+const twitterAccounts = require("./config/twitter-accounts");
 
-
-async function postScheduledTweet() {
+async function postScheduledTweet(account) {
   try {
-    console.log("Generating motivational tweet...");
-    const tweetContent = await generateMotivationalTweet();
-    console.log("Posting tweet:", tweetContent);
-    await postTweet(tweetContent);
-    console.log("Tweet posted successfully!");
+    console.log(`Generating tweet for account: ${account.name}...`);
+    const tweetContent = await geminiHelper.generateTweet(
+      account.promptCategories
+    );
+    console.log(`Posting tweet for ${account.name}:`, tweetContent);
+    await twitterHelper.postTweet(account.id, tweetContent);
+    console.log(`Tweet posted successfully for ${account.name}!`);
   } catch (error) {
-    console.error("Scheduling Error:", error);
+    console.error(`Scheduling Error for ${account.name}:`, error);
   }
 }
 
-// Schedule a job to run every 30 seconds
-// schedule.scheduleJob("*/30 * * * * *", postScheduledTweet);
+// Schedule tweets for each account
+twitterAccounts.forEach((account) => {
+  schedule.scheduleJob("0 */3 * * *", () => postScheduledTweet(account));
+});
+// twitterAccounts.forEach(account => {
+//   schedule.scheduleJob("*/30 * * * * *", () => postScheduledTweet(account));
+// });
+console.log(
+  "Tweet scheduler running. Tweets will be posted every 3 hours for each account."
+);
 
-// Schedule the job to run every 3 hours
-schedule.scheduleJob("0 */3 * * *", postScheduledTweet);
-
-console.log("Tweet scheduler running. Tweets will be posted every 3 hours.");
-// console.log('Job executed at:', new Date().toLocaleTimeString());
-
-// Handle process termination
 process.on("SIGINT", () => {
   schedule
     .gracefulShutdown()
