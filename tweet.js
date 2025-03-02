@@ -22,7 +22,7 @@ async function postScheduledTweet() {
 schedule.scheduleJob("0 */3 * * *", postScheduledTweet);
 
 console.log("Tweet scheduler running. Tweets will be posted every 3 hours.");
-console.log('Job executed at:', new Date().toLocaleTimeString());
+// console.log('Job executed at:', new Date().toLocaleTimeString());
 
 // Handle process termination
 process.on("SIGINT", () => {

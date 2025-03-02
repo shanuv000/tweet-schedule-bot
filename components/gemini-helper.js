@@ -1,6 +1,5 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 require("dotenv").config();
-// gemini_helper.js
 const prompts = require("../utils/prompts");
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({
@@ -13,17 +12,17 @@ const generationConfig = {
   topK: 20,                // Narrow token selection for precision
   maxOutputTokens: 120,    // Strict limit for tweet brevity
   responseMimeType: "text/plain",
-  
 };
+
+function getRandomElement(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
 
 async function generateMotivationalTweet() {
   try {
-    const randomPrompt = prompts[Math.floor(Math.random() * prompts.length)];
-
+    const randomPrompt = getRandomElement(prompts);
     const chatSession = model.startChat({ generationConfig, history: [] });
-
     const result = await chatSession.sendMessage(randomPrompt);
-
     const response = result.response.text();
     const hashtags = response.match(/#\w+/g) || [];
     const quote = response.replace(/#\w+/g, "").trim();
