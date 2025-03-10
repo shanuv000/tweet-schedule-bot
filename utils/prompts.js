@@ -1,88 +1,59 @@
 const prompts = {
   tech: [
-    "Craft a viral tweet about AI boosting coding efficiency. Include: 1 jaw-dropping stat, 💻 emoji, 3 hashtags (1 trending tech tag), max 280 chars. Structure: [Shocking hook] 💻 [Data] → [Implication] [Hashtags]",
-    "Create curiosity about quantum computing. Format: Rhetorical Q, ⚛️ emoji, analogy to smartphones/cloud, 2-3 hashtags #QuantumLeap, max 280 chars. Start with 'Future Alert:'",
-    "Generate Web3 security buzz. Must include: 🔒 emoji, clear comparison ('X:90% secure vs Y:60%'), 1 bold question, #Web3Safety + 2 niche tags, 280 chars",
-    "Quantum Leap: 🔬 [Breakthrough] enabling [application]. Include: 1 stat (e.g., 'IBM’s 127-qubit chip'), 2 hashtags (#QuantumComputing + #[NicheUse]), 280 chars",
-    "Customer Service Rebooted: 🤖 [Tool] cuts resolution time by 50%. Include: 1 satisfaction stat ('CSAT↑30%'), 3 hashtags (#AI + #CX + #[ToolName]), 280 chars",
+    "Generate a tweet about AI improving coding efficiency. Begin with an attention-grabbing fact or question, include the 💻 emoji, provide a surprising statistic, explain its significance, and end with three hashtags, including one popular tech hashtag. Keep it under 280 characters.",
+    "Write a tweet to generate interest in quantum computing. Start with 'Future Alert:', ask a rhetorical question, use the ⚛️ emoji, compare quantum computing to smartphones or cloud computing, and include 2-3 hashtags, one being #QuantumLeap. Ensure it's under 280 characters.",
+    "Create a tweet to highlight Web3 security. Include the 🔒 emoji, a comparison showing Web3's security advantage (e.g., 'Web3: 90% secure vs traditional: 60%'), a provocative question, and the hashtags #Web3Safety plus two other relevant hashtags. Keep it under 280 characters.",
+    "Write a tweet about a quantum computing breakthrough. Describe the breakthrough and its application, include a statistic (e.g., 'IBM’s 127-qubit chip'), and use the hashtags #QuantumComputing and another relevant one. Ensure it's under 280 characters.",
+    "Generate a tweet about an AI tool improving customer service. Mention the tool, state how it reduces resolution time (e.g., 'cuts resolution time by 50%'), include a customer satisfaction statistic (e.g., 'CSAT increased by 30%'), and use three hashtags: #AI, #CX, and one specific to the tool. Keep it under 280 characters.",
   ],
   marketing: [
-    "Expose 2024's hidden marketing gem. Requirements: 💎 in first 3 words, 2 contrasting stats ('X↑20% vs Y↓10%'), 3 hashtags inc #GrowthHacking, max 280 chars",
-    "Create tweetstorm opener for content secrets. Include: 🚨 PSA: starter, 📈 emoji, 3 unexpected platforms, cliffhanger ending, 2 hashtags, 280 chars max",
-    "Contrarian influencer take. Must have: ⚠️ emoji, 1 paradoxical stat ('80% miss ROI'), 3 spicy hashtags (#InfluencerBust), 280 chars",
-    "Small but Mighty: 📢 Micro-influencers drive 3x engagement vs celebs! Include: 1 case study (e.g., '@HealthBae 200% ROI'), 2 hashtags (#MicroInfluencers + #[Industry]), 280 chars",
-    "Tailored to You: 🎯 [Company] uses AI for hyper-personalization. Include: 1 engagement stat ('CTR↑40%'), 3 hashtags (#AI + #MarTech + #[Brand]), 280 chars",
+    "Create a tweet revealing a lesser-known marketing strategy or tool for 2024. Start with the 💎 emoji in the first three words, provide two contrasting statistics (e.g., 'Strategy X increased engagement by 20% while Y decreased by 10%'), and include three hashtags, one being #GrowthHacking. Ensure it's under 280 characters.",
+    "Write the first tweet of a thread about content marketing secrets. Begin with '🚨 PSA:', include the 📈 emoji, mention three unexpected platforms for content distribution, end with a cliffhanger to encourage reading the next tweet, and use two relevant hashtags. Keep it under 280 characters.",
+    "Generate a tweet with a contrarian view on influencer marketing. Include the ⚠️ emoji, a paradoxical statistic (e.g., '80% of influencer campaigns miss ROI targets'), and three provocative hashtags, including #InfluencerBust. Keep it under 280 characters.",
+    "Create a tweet about the effectiveness of micro-influencers. Mention a specific case study (e.g., '@HealthBae achieved 200% ROI'), include a statistic comparing micro-influencers to celebrities (e.g., '3x engagement'), and use two hashtags: #MicroInfluencers and one industry-specific. Ensure it's under 280 characters.",
+    "Write a tweet about a company using AI for personalized marketing. Name the company, describe how AI is used, include an engagement statistic (e.g., 'CTR increased by 40%'), and use three hashtags: #AI, #MarTech, and one brand-specific. Keep it under 280 characters.",
   ],
   business: [
-    "Reveal stealth startup tactics. Start: 🚨 Exposure:, include 🕶️ emoji, 3 metrics ($1M|5x ROI|6mo), #UnfilteredBiz + 2 tags, 280 chars",
-    "Leadership thread hook on remote teams. Use: ❓Question format, 🌐 emoji, 1 produtivity stat, #FutureOfWork + 2 tags, 280 chars",
-    "Bootstrap finance hacks tweet. Include: 💸 emoji, 3 tools (Stripe/QuickBooks), 2 metrics (50% savings), #CashflowHustle + 2 tags, 280 chars",
-    "Green is Gold: 🌿 [Company] reduced emissions by 45% via [initiative]. Include: 1 sustainability metric, 2 hashtags (#CircularEconomy + #[Sector]), 280 chars",
-    "WFH Wisdom: 🏠 Remote teams see 22% productivity boost. Tips: [Tool1] + [Tactic2]. 3 hashtags (#RemoteWork + #[Industry]), 280 chars",
+    "Generate a tweet exposing stealth startup tactics. Start with '🚨 Exposure:', include the 🕶️ emoji, mention three key metrics (e.g., '$1M revenue, 5x ROI, 6 months to market'), and use the hashtags #UnfilteredBiz plus two others. Keep it under 280 characters.",
+    "Write the opening tweet for a thread on leadership in remote teams. Use a question format, include the 🌐 emoji, provide a productivity statistic, and use the hashtags #FutureOfWork plus two others. Ensure it's under 280 characters.",
+    "Create a tweet about bootstrap finance hacks. Include the 💸 emoji, mention three useful tools (e.g., Stripe, QuickBooks), provide two financial metrics (e.g., '50% cost savings'), and use the hashtags #CashflowHustle plus two others. Keep it under 280 characters.",
+    "Generate a tweet about a company's sustainability efforts. Name the company, describe the initiative, state the emission reduction (e.g., 'reduced emissions by 45%'), include a sustainability metric, and use two hashtags: #CircularEconomy and one sector-specific. Ensure it's under 280 characters.",
+    "Write a tweet about the benefits of remote work. Include the 🏠 emoji, mention a productivity boost statistic (e.g., '22% increase'), suggest two tools or tactics, and use three hashtags: #RemoteWork and two industry-specific. Keep it under 280 characters.",
   ],
   ai: [
-    "BREAKING AI ethics tweet. Structure: ⚖️ emoji, 1 shocking development ('AI denied loan to CEO'), rhetorical Q, #AIEthics + 2 tags, 280 chars",
-    "Explain AI to non-techies. Use: 🧠 emoji + home appliance analogy, 1 impact stat ('75% faster Dx'), #ExplainItLikeIm5 + 2 tags, 280 chars",
-    "Hype healthcare AI. Opener: 🚑 Not Sci-Fi:, include ⚕️ emoji, 1 patient outcome stat, #HealthTech + 2 tags, 280 chars",
-    "AI’s Moral Compass: ⚖️ [Controversy] sparks regulation debate. Solution: [Framework]. 2 hashtags (#AIEthics + #[PolicyTag]), 280 chars",
-    "Smart Learning: 🎓 [Tool] personalizes education → 35% faster mastery. Include: 1 outcome stat, 3 hashtags (#EdTech + #[Subject]), 280 chars",
+    "Create a tweet about a recent AI ethics development. Include the ⚖️ emoji, describe a shocking scenario (e.g., 'AI denied loan to CEO'), pose a rhetorical question, and use the hashtags #AIEthics plus two others. Keep it under 280 characters.",
+    "Generate a tweet explaining AI to a non-technical audience. Use the 🧠 emoji, an analogy to a home appliance, include an impact statistic (e.g., '75% faster diagnosis'), and use the hashtags #ExplainItLikeIm5 plus two others. Ensure it's under 280 characters.",
+    "Write a tweet hyping AI in healthcare. Start with '🚑 Not Sci-Fi:', include the ⚕️ emoji, provide a patient outcome statistic, and use the hashtags #HealthTech plus two others. Keep it under 280 characters.",
+    "Create a tweet about AI regulation. Describe a controversy, suggest a solution framework, and use two hashtags: #AIEthics and one policy-related. Ensure it's under 280 characters.",
+    "Generate a tweet about an AI tool for education. Name the tool, describe how it personalizes learning, include an outcome statistic (e.g., '35% faster mastery'), and use three hashtags: #EdTech and two subject-specific. Keep it under 280 characters.",
   ],
   development: [
-    "Debugging nightmare tweet. Include: 😱 emoji, 1 dev pain stat ('40hrs/mo debugging'), 3 fix tools, #DevLife + 1 tag, 280 chars",
-    "Low-code revolution tweet. Must have: 🚀 emoji, 1 market stat ('$50B by 2025'), 2 success cases, #NoCode2024 + 2 tags, 280 chars",
-    "Framework popularity quiz. Format: 📊 emoji, 2024 stats ('React 60% vs Svelte 25%'), 1 rising star tool, 3 hashtags, 280 chars",
-    "Cloud Power: ☁️ [Advantage] (e.g., 'Auto-scaling cuts costs 40%'). Include: 1 adoption stat ('80% enterprises'), 3 tools (AWS/Kubernetes), 2 hashtags (#CloudNative), 280 chars",
-    "Community Code: 💻 [OSS Tool] used by 70% Fortune 500. Include: 1 impact stat, 2 hashtags (#OpenSource + #[ToolName]), 280 chars",
+    "Write a tweet about a common debugging challenge. Include the 😱 emoji, a statistic about time spent debugging (e.g., '40 hours/month'), mention three debugging tools, and use the hashtags #DevLife plus one other. Ensure it's under 280 characters.",
+    "Create a tweet about the rise of low-code platforms. Include the 🚀 emoji, a market growth statistic (e.g., '$50B by 2025'), mention two success stories, and use the hashtags #NoCode2024 plus two others. Keep it under 280 characters.",
+    "Generate a tweet comparing framework popularity. Include the 📊 emoji, 2024 usage statistics (e.g., 'React 60% vs Svelte 25%'), mention one emerging framework, and use three relevant hashtags. Ensure it's under 280 characters.",
+    "Write a tweet about the advantages of cloud computing. Mention a specific benefit (e.g., 'auto-scaling reduces costs by 40%'), include an adoption statistic (e.g., '80% of enterprises'), list three cloud tools (e.g., AWS, Kubernetes), and use two hashtags: #CloudNative and one other. Keep it under 280 characters.",
+    "Create a tweet about an open-source tool's impact. Name the tool, state its usage (e.g., 'used by 70% of Fortune 500'), include an impact statistic, and use two hashtags: #OpenSource and one tool-specific. Ensure it's under 280 characters.",
   ],
   spaceExploration: [
-    "Red Planet Rising: 🚀 [Development] ([Stat]). Example: 'NASA's MOXIE produces 10g O2/hr'. 3 hashtags (#Mars2030 + #SpaceTech + #[Agency]), 280 chars",
-    "To Infinity & Beyond: 🛸 [Company] books 500 space tourists at $250k each. Include: 1 demand stat, 2 hashtags (#SpaceVacay + #[CompanyTag]), 280 chars",
+    "Generate a tweet about a Mars mission development. Include the 🚀 emoji, describe the development with a statistic (e.g., 'NASA's MOXIE produces 10g O2/hr'), and use three hashtags: #Mars2030, #SpaceTech, and one agency-specific. Keep it under 280 characters.",
+    "Write a tweet about space tourism. Name a company, mention the number of bookings and price (e.g., '500 space tourists at $250k each'), include a demand statistic, and use two hashtags: #SpaceVacay and one company-specific. Ensure it's under 280 characters.",
   ],
   climateChange: [
-    "Green Revolution: ☀️ [Tech] achieves 90% efficiency (e.g., 'Perovskite solar cells'). Include: 1 impact metric, 3 hashtags (#CleanEnergy + #[TechName]), 280 chars",
-    "Urban Eco-Warriors: 🏙️ [City] cuts emissions 35% via [initiative]. 2 hashtags (#ClimateAction + #[CityName]), 280 chars",
+    "Create a tweet about a green technology breakthrough. Include the ☀️ emoji, describe the technology and its efficiency (e.g., 'Perovskite solar cells achieve 90% efficiency'), provide an impact metric, and use three hashtags: #CleanEnergy and two tech-specific. Keep it under 280 characters.",
+    "Generate a tweet about a city's climate action. Name the city, describe the initiative, state the emission reduction (e.g., 'cuts emissions by 35%'), and use two hashtags: #ClimateAction and one city-specific. Ensure it's under 280 characters.",
   ],
   healthWellness: [
-    "Doctor in Your Pocket: 🩺 [Feature] enables 24/7 dermatology consults. Include: 1 stat ('95% patient approval'), 3 hashtags (#Telehealth + #[TechName]), 280 chars",
-    "Mind Matters at Work: 🧠 [Practice] reduces burnout by 40%. Include: 1 wellbeing stat, 2 hashtags (#MentalHealth + #[Industry]), 280 chars",
+    "Write a tweet about a telehealth feature. Include the 🩺 emoji, describe the feature (e.g., '24/7 dermatology consults'), provide a patient approval statistic (e.g., '95% satisfaction'), and use three hashtags: #Telehealth and two tech-specific. Keep it under 280 characters.",
+    "Create a tweet about workplace mental health. Include the 🧠 emoji, mention a practice that reduces burnout (e.g., 'reduces burnout by 40%'), provide a wellbeing statistic, and use two hashtags: #MentalHealth and one industry-specific. Ensure it's under 280 characters.",
   ],
   entertainment: [
-    "Binge-Worthy: 🍿 [Show] dominates with 1B hours streamed. 2 hashtags (#StreamingWars + #[ShowName]), 280 chars",
-    "Pixels & Plots: 🎮 [Game] wins storytelling award. Include: 1 narrative impact fact, 3 hashtags (#Gaming + #[StudioTag]), 280 chars",
+    "Generate a tweet about a popular streaming show. Include the 🍿 emoji, mention the show's name and streaming hours (e.g., '1B hours streamed'), and use two hashtags: #StreamingWars and one show-specific. Keep it under 280 characters.",
+    "Write a tweet about a video game's storytelling. Include the 🎮 emoji, name the game and the award it won, provide a narrative impact fact, and use three hashtags: #Gaming and two studio-specific. Ensure it's under 280 characters.",
   ],
   education: [
-    "Upskill Online: 💻 [Platform] trains 5M professionals annually. Include: 1 growth stat, 3 hashtags (#EdTech + #[SkillTag]), 280 chars",
-    "Smart Tutor: 👩🏫 [AI Tool] improves test scores by 1.5 grades. 2 hashtags (#AI + #[Subject]), 280 chars",
+    "Create a tweet about an online learning platform. Include the 💻 emoji, mention the platform's name and number of professionals trained (e.g., '5M annually'), provide a growth statistic, and use three hashtags: #EdTech and two skill-specific. Keep it under 280 characters.",
+    "Generate a tweet about an AI tutoring tool. Include the 👩🏫 emoji, describe how it improves learning (e.g., 'improves test scores by 1.5 grades'), and use two hashtags: #AI and one subject-specific. Ensure it's under 280 characters.",
   ],
 };
 
 module.exports = prompts;
-// const prompts = {
-//   tech: [
-//     "Generate a concise and engaging tweet sharing a surprising statistic about artificial intelligence in software development. The response should be formatted for direct posting, including relevant and trending hashtags.",
-//     "Create a Twitter post discussing the impact of quantum computing on modern software engineering. The response should be formatted for direct posting, keeping it succinct and including trending hashtags.",
-//     // ... other tech prompts
-//   ],
-//   marketing: [
-//     "Create a compelling tweet about digital marketing trends in 2024. Include relevant statistics and trending hashtags.",
-//     "Generate an engaging tweet about content marketing success stories. Include metrics and relevant hashtags.",
-//     // ... other marketing prompts
-//   ],
-//   business: [
-//     "Draft a tweet about emerging business technologies. Include relevant trends and hashtags.",
-//     "Create an insightful tweet about startup success stories. Include key metrics and trending hashtags.",
-//     // ... other business prompts
-//   ],
-//   ai: [
-//     "Write a tweet about the latest AI breakthroughs. Include specific achievements and trending hashtags.",
-//     "Generate a tweet about practical AI applications in business. Include real examples and relevant hashtags.",
-//     // ... other AI prompts
-//   ],
-//   development: [
-//     "Create a tweet about software development best practices. Include specific tips and trending hashtags.",
-//     "Draft a tweet about developer productivity tools. Include tool names and relevant hashtags.",
-//     // ... other development prompts
-//   ]
-// };
-
-// module.exports = prompts;
