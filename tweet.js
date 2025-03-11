@@ -21,7 +21,7 @@ async function postScheduledTweet(account) {
 twitterAccounts.forEach((account) => {
   schedule.scheduleJob("0 */3 * * *", () => postScheduledTweet(account));
 });
-// twitterAccounts.forEach(account => {
+// twitterAccounts.forEach((account) => {
 //   schedule.scheduleJob("*/30 * * * * *", () => postScheduledTweet(account));
 // });
 const nextTweetTime = new Date();

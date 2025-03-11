@@ -54,6 +54,38 @@ const prompts = {
     "Create a tweet about an online learning platform. Include the 💻 emoji, mention the platform's name and number of professionals trained (e.g., '5M annually'), provide a growth statistic, and use three hashtags: #EdTech and two skill-specific. Keep it under 280 characters.",
     "Generate a tweet about an AI tutoring tool. Include the 👩🏫 emoji, describe how it improves learning (e.g., 'improves test scores by 1.5 grades'), and use two hashtags: #AI and one subject-specific. Ensure it's under 280 characters.",
   ],
+  urtechy: [
+    // Service-Specific Prompts
+    "Generate a tweet (under 280 characters) promoting urTechy's web development services. Use a professional yet friendly tone, emphasize tailored solutions, include a clear call to action with the link https://urtechy.com/, and add hashtags #WebDevelopment and #DigitalSolutions. Use 1-2 emojis for engagement.",
+
+    "Generate a tweet (under 280 characters) promoting urTechy's mobile app development services. Use a professional yet friendly tone, highlight custom solutions, include a call to action with the link https://urtechy.com/, and add hashtags #MobileApps and #AppDevelopment. Use 1-2 emojis for appeal.",
+
+    "Generate a tweet (under 280 characters) showcasing urTechy's digital marketing expertise. Use a professional yet friendly tone, mention a benefit like increased online visibility, ask an engaging question, include the link https://urtechy.com/, and add hashtags #DigitalMarketing and #OnlineGrowth. Use 1-2 emojis.",
+
+    "Generate a tweet (under 280 characters) promoting urTechy's cloud computing solutions. Use a professional yet friendly tone, emphasize their innovative approach, include a call to action with the link https://urtechy.com/, and add hashtags #CloudComputing and #TechInnovation. Use 1-2 emojis for engagement.",
+
+    // Industry-Specific Prompts
+    "Generate a tweet (under 280 characters) highlighting urTechy's success in the banking and financial services industry. Use a professional tone, include a statistic or testimonial, include a call to action with the link https://urtechy.com/, and add hashtags #FinTech and #BankingSolutions. Use 1 emoji if relevant.",
+
+    "Generate a tweet (under 280 characters) promoting urTechy's services for the retail and consumer services industry. Use a friendly tone, mention enhanced customer experience, include a call to action with the link https://urtechy.com/, and add hashtags #RetailTech and #CustomerExperience. Use 1-2 emojis.",
+
+    // Interactive Prompts
+    "Generate a tweet (under 280 characters) asking Twitter users about their biggest web development challenge and positioning urTechy as the solution. Use a professional yet friendly tone, include the link https://urtechy.com/, and add hashtags #WebDev and #TechSolutions. Use 1-2 emojis to encourage replies.",
+
+    "Generate a tweet (under 280 characters) asking Twitter users about their biggest hurdle in digital transformation and offering urTechy’s help. Use a professional yet approachable tone, include the link https://urtechy.com/, and add hashtags #DigitalTransformation and #BusinessGrowth. Use 1-2 emojis for engagement.",
+
+    "Generate a tweet (under 280 characters) asking users to share their favorite web development or software tool and noting urTechy’s expert services. Use a friendly tone, include the link https://urtechy.com/, and add hashtags #DevTools and #SoftwareDevelopment. Use 1-2 emojis to boost interaction.",
+    "Generate a tweet (under 280 characters) asking users to share their top cybersecurity tip. Use a friendly tone, include the link https://urtechy.com/, and add hashtags #urTechy, #Cybersecurity, and #TechTrends. Use 1-2 emojis to boost engagement.",
+    "Generate a tweet (under 280 characters) asking users to share their favorite project management tools. Use a friendly tone, include the link https://urtechy.com/, and add hashtags #urTechy, #ProjectManagement, and #Productivity. Use 1-2 emojis for interaction.",
+    "Generate a tweet (under 280 characters) asking users to share their biggest challenges in AI development. Use a friendly tone, include the link https://urtechy.com/, and add hashtags #urTechy, #AI, and #Innovation. Use 1-2 emojis to encourage replies.",
+    "Generate a tweet (under 280 characters) asking users to share their favorite UX design tools. Use a friendly tone, include the link https://urtechy.com/, and add hashtags #urTechy, #UXDesign, and #DesignCommunity. Use 1-2 emojis to make it engaging.",
+    "Generate a tweet (under 280 characters) asking users to share their biggest pain points in e-commerce. Use a friendly tone, include the link https://urtechy.com/, and add hashtags #urTechy, #Ecommerce, and #AskTwitter. Use 1-2 emojis for appeal.",
+    "Generate a tweet (under 280 characters) asking users to share their favorite DevOps tools. Use a friendly tone, include the link https://urtechy.com/, and add hashtags #urTechy, #DevOps, and #CloudTech. Use 1-2 emojis to spark conversation.",
+    "Generate a tweet (under 280 characters) asking users to share their biggest challenges in data analytics. Use a friendly tone, include the link https://urtechy.com/, and add hashtags #urTechy, #DataAnalytics, and #BigData. Use 1-2 emojis for engagement.",
+    "Generate a tweet (under 280 characters) asking users to share their favorite tech blogs or podcasts. Use a friendly tone, include the link https://urtechy.com/, and add hashtags #urTechy, #TechTalk, and #TechCommunity. Use 1-2 emojis to encourage sharing.",
+    "Generate a tweet (under 280 characters) asking users to share their biggest tech issues with remote work. Use a friendly tone, include the link https://urtechy.com/, and add hashtags #urTechy, #RemoteWork, and #WFH. Use 1-2 emojis for interaction.",
+    "Generate a tweet (under 280 characters) asking users to share their favorite API development tools. Use a friendly tone, include the link https://urtechy.com/, and add hashtags #urTechy, #APIDev, and #DevTools. Use 1-2 emojis to boost replies.",
+  ],
 };
 
 module.exports = prompts;

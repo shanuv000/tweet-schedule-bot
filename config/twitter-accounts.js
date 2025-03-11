@@ -6,7 +6,19 @@ const twitterAccounts = [
     apiKeySecret: process.env.API_KEY_SECRET,
     accessToken: process.env.ACCESS_TOKEN,
     accessSecret: process.env.ACCESS_TOKEN_SECRET,
-    promptCategories: ["tech", "ai", "development", "spaceExploration"],
+    promptCategories: [
+      "tech",
+      "ai",
+      "development",
+      // "spaceExploration",
+      "entertainment",
+      // "healthWellness",
+      // "climateChange",
+      "education",
+      "marketing",
+      "business",
+      "ai",
+    ],
   },
   {
     id: "account2",
@@ -15,15 +27,7 @@ const twitterAccounts = [
     apiKeySecret: process.env.ACCOUNT2_API_KEY_SECRET,
     accessToken: process.env.ACCOUNT2_ACCESS_TOKEN,
     accessSecret: process.env.ACCOUNT2_ACCESS_TOKEN_SECRET,
-    promptCategories: [
-      "marketing",
-      "business",
-      "entertainment",
-      "education",
-      "ai",
-      "healthWellness",
-      "climateChange",
-    ],
+    promptCategories: ["urtechy"],
   },
 ];
 
