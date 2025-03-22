@@ -27,7 +27,19 @@ const twitterAccounts = [
     apiKeySecret: process.env.ACCOUNT2_API_KEY_SECRET,
     accessToken: process.env.ACCOUNT2_ACCESS_TOKEN,
     accessSecret: process.env.ACCOUNT2_ACCESS_TOKEN_SECRET,
-    promptCategories: ["urtechy"],
+    promptCategories: ["urtechy", "tech", "ai", "development"],
+  },
+  {
+    id: "account3",
+    name: "Third Account",
+    apiKey: process.env.ACCOUNT3_API_KEY,
+    apiKeySecret: process.env.ACCOUNT3_API_KEY_SECRET,
+    accessToken: process.env.ACCOUNT3_ACCESS_TOKEN,
+    accessSecret: process.env.ACCOUNT3_ACCESS_TOKEN_SECRET,
+    promptCategories: [
+      // "entertainment",
+      "IPL2025",
+    ],
   },
 ];
 
